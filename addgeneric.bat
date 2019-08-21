@@ -13,7 +13,7 @@ if %ERRORLEVEL%==1 goto badip
  goto end
 
  :goodip
- cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\Prnport.vbs" -a -r %portname% -h %ipaddress%-o raw -n 9100
+ cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\Prnport.vbs" -a -r %portname% -h %ipaddress% -o raw -n 9100
  cscript "C:\Windows\System32\Printing_Admin_Scripts\en-US\prnmngr.vbs" -a -p %name% -m "Generic / Text Only" -r %portname%
  echo Printer %name% added
  goto end
